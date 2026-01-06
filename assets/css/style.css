@@ -1,0 +1,114 @@
+body {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text);
+}
+
+.calculator {
+    background: #111827;
+    border-radius: 24px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+}
+
+.display {
+    background: #020617;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 16px;
+    text-align: right;
+    margin-bottom: 16px;
+}
+
+#display {
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    background: #1f2933;
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover {
+    background: #38bdf8;
+    color: black;
+}
+
+.op {
+    background: #1e40af;
+    grid-column: span 1;
+    
+}
+
+.zero {
+    grid-column: span 3;
+}
+
+.row{
+    display: flex;
+    grid-column: span 4;
+}
+.row button{
+    flex: 1;
+    margin: 0 4px;
+        
+}
+
+
+
+
+
+#history-container {
+    margin-top: 20px;
+    background: #1f2933;
+    padding: 12px;
+    border-radius: 12px;
+    max-height: 150px;
+    overflow-y: auto;
+    color: var(--text);
+}
+
+#history-container h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--primary);
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-bottom: 1px solid #111827;
+    font-size: 1rem;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item .operation {
+    color: var(--text);
+}
+
+.history-item .result {
+    color: var(--accent);
+    font-weight: bold;
+}

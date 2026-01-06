@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- defer -> Wait html code  -->
+    <script src="assets/js/calculator.js" defer></script>
+    <script src="assets/js/Validator.js" defer></script>
+    <script src="assets/js/History.js" defer></script>
+
+
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        
+        <div class="buttons">
+            <div class="row">
+                
+                <button onclick="clearAll()">AC</button>
+                <button onclick="clearEntry()">C</button>
+                <button class="op" onclick="setOperator('*')">×</button>
+            </div>
+            
+            
+            <button onclick="pressNumber('7')">7</button>
+            <button onclick="pressNumber('8')">8</button>
+            <button onclick="pressNumber('9')">9</button>
+            
+            <button class="op" onclick="setOperator('-')">−</button>
+            
+            <button onclick="pressNumber('4')">4</button>
+            <button onclick="pressNumber('5')">5</button>
+            <button onclick="pressNumber('6')">6</button>
+            <button class="op" onclick="setOperator('+')">+</button>
+            
+            <button onclick="pressNumber('1')">1</button>
+            <button onclick="pressNumber('2')">2</button>
+            <button onclick="pressNumber('3')">3</button>
+            <button class="op" onclick="setOperator('/')">÷</button>
+            <div class="row">
+    
+                <button class="zero"onclick="pressNumber('0')">0</button>
+                <button class="op" onclick="calculate()">=</button> 
+            </div>
+        </div>
+
+        <!-- History UI -->
+        <div id="history-container">
+            <h3>History</h3>
+            <div id="history"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/validation.js" defer></script>
+    <script src="assets/js/history.js" defer></script>
+    <script src="assets/js/calculator.js" defer></script>
+
+
+
+</body>
+
+</html>
